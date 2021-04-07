@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'account.apps.AccountConfig',
     'user_profile.apps.UserProfileConfig',
+    'appointment.apps.AppointmentConfig',
 ]
 
 MIDDLEWARE = [

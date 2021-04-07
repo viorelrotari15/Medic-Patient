@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('account.urls', namespace="account")),
     path("", include('user_profile.urls', namespace="user_profile")),
+    path("", include('appointment.urls', namespace="appointment")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

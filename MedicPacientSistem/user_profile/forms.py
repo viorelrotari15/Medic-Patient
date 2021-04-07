@@ -19,4 +19,4 @@ class DoctorProfileForm(forms.ModelForm):
         fields = ('name', 'phone', 'email', 'gender', 'age', 'address', 'department', 'attendance', 'salary', 'status')
 
     # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
+        # super().__init__(*args, **kwargs)

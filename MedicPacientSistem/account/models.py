@@ -1,13 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User, AbstractUser
 # Create your models here.
+
 USER_CHOICES = [
     ('D', 'Doctor'),
     ('P', 'Patient'),
     ('R', 'Receptionist'),
-    ('MN', 'Manager')
+    ('HR', 'HR')
 ]
-
 
 class User(AbstractUser):
     user_type = models.CharField(choices=USER_CHOICES, max_length=2)
@@ -22,7 +22,7 @@ class User(AbstractUser):
         if self.user_type == 'P':
             return True
         else:
-            return  False
+            return False
 
     def is_receptionist(self):
         if self.user_type == 'R':
@@ -30,8 +30,8 @@ class User(AbstractUser):
         else:
             return False
 
-    def is_manager(self):
-        if self.user_type == 'MN':
+    def is_HR(self):
+        if self.user_type == 'HR':
             return True
         else:
             return False
